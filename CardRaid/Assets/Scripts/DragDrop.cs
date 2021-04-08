@@ -1,20 +1,32 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Mirror;
 
-public class DragDrop : MonoBehaviour
+public class DragDrop : NetworkBehaviour
 {
     public GameObject Canvas;
+    public GameObject DropZone;
+    public PlayerManager PlayerManager;
+
     private Vector2 startPosition;
+
     private bool isDragging = false;
     private bool isOverDropZone = false;
+    private bool isDraggable = true;
+
     private GameObject startParent;
     private GameObject dropZone;
 
     //gets called when the object is instantiated
-    private void Awake()
+    private void Start()
     {
         Canvas = GameObject.Find("Main Canvas");
+        DropZone = GameObject.Find("DropZone");
+        if (!hasAuthority)
+        {
+            isDraggable = false;
+        }
     }
 
     // Update is called once per frame
@@ -41,6 +53,8 @@ public class DragDrop : MonoBehaviour
 
     public void StartDrag()
     {
+        if (!isDraggable)
+            return;
         startParent = transform.parent.gameObject;
         startPosition = transform.position;
         isDragging = true;
@@ -48,10 +62,17 @@ public class DragDrop : MonoBehaviour
 
     public void EndDrag()
     {
+        if (!isDraggable)
+            return;
         isDragging = false;
         if (isOverDropZone)
         {
             transform.SetParent(dropZone.transform, false);
+            isDraggable = false;
+            NetworkIdentity networkIdentity = NetworkClient.connection.identity;
+            PlayerManager = networkIdentity.GetComponent<PlayerManager>();
+            //the game object is the card or gameobject generally speaking that this script is attached to
+            PlayerManager.PlayCard(gameObject);
         }
         else
         {
