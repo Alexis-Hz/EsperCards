@@ -6,16 +6,14 @@ using Mirror;
 public class DrawCards : NetworkBehaviour
 {
     public PlayerManager PlayerManager;
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    public Orchestrator Orchestrator;
 
     public void OnClick()
     {
         NetworkIdentity networkIdentity = NetworkClient.connection.identity;
         PlayerManager = networkIdentity.GetComponent<PlayerManager>();
+        Orchestrator = PlayerManager.GetComponent<Orchestrator>();
         PlayerManager.CmdDealCards();
+        Orchestrator.CmdStartClock();
     }
 }

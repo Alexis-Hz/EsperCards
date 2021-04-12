@@ -6,6 +6,7 @@ ScriptsOnlyBuild:
     - DebugLogDisplay
     - DragDrop
     - DrawCards
+    - Orchestrator
     - PlayerManager
     Mirror.Components.dll:
     - Mirror.NetworkTransform
@@ -73,33 +74,35 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 2238}
     - Class: 114
-      Script: {instanceID: 2438}
+      Script: {instanceID: 2430}
     - Class: 114
-      Script: {instanceID: 2552}
+      Script: {instanceID: 2440}
     - Class: 114
-      Script: {instanceID: 2928}
+      Script: {instanceID: 2554}
     - Class: 114
-      Script: {instanceID: 2986}
+      Script: {instanceID: 2930}
     - Class: 114
-      Script: {instanceID: 3028}
+      Script: {instanceID: 2988}
     - Class: 114
-      Script: {instanceID: 3122}
+      Script: {instanceID: 3030}
     - Class: 114
-      Script: {instanceID: 3628}
+      Script: {instanceID: 3124}
     - Class: 114
-      Script: {instanceID: 4018}
+      Script: {instanceID: 3630}
     - Class: 114
-      Script: {instanceID: 4182}
+      Script: {instanceID: 4020}
     - Class: 114
-      Script: {instanceID: 4330}
+      Script: {instanceID: 4084}
     - Class: 114
-      Script: {instanceID: 4462}
+      Script: {instanceID: 4186}
     - Class: 114
-      Script: {instanceID: 4752}
+      Script: {instanceID: 4328}
     - Class: 114
-      Script: {instanceID: 16558}
+      Script: {instanceID: 4336}
     - Class: 114
-      Script: {instanceID: 19646}
+      Script: {instanceID: 4468}
+    - Class: 114
+      Script: {instanceID: 4758}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -421,6 +424,12 @@ ScriptsOnlyBuild:
     className: NetworkOwnerChecker
   - hash:
       serializedVersion: 2
+      Hash: 592a1672b0b600d35bad890f222bcc4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: CardFlipper
+  - hash:
+      serializedVersion: 2
       Hash: a1aa98c78061c6f03a8c124cda576e67
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
@@ -613,7 +622,7 @@ ScriptsOnlyBuild:
     className: BeforeAfterTestCommandState
   - hash:
       serializedVersion: 2
-      Hash: 3ad6382617c540dc3fbe58f63d4c1b7a
+      Hash: 908b994bce7abef3665ebdd9fa65d2fc
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PlayerManager
@@ -919,7 +928,7 @@ ScriptsOnlyBuild:
     className: NetworkSceneChecker
   - hash:
       serializedVersion: 2
-      Hash: ec0dd865a06b258fdadaaa60bcccb43f
+      Hash: 7bdccf94a865cd934511601edf68e674
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: DrawCards
@@ -947,6 +956,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TMP_Settings
+  - hash:
+      serializedVersion: 2
+      Hash: 8913d10b05b0e273f765fd6c3f9d82a8
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Orchestrator
   - hash:
       serializedVersion: 2
       Hash: 893dbdbfe611d62e230a686ea89f1efd
@@ -1025,6 +1040,12 @@ ScriptsOnlyBuild:
     assemblyName: Mirror.Components.dll
     namespaceName: Mirror.Experimental
     className: NetworkRigidbody2D
+  - hash:
+      serializedVersion: 2
+      Hash: bb560bc3eec556516d3480ba529763ad
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: DebugLogDisplay
   - hash:
       serializedVersion: 2
       Hash: fa657c3ec40e8c152d1d7938b1a10cd9
@@ -1175,18 +1196,6 @@ ScriptsOnlyBuild:
     assemblyName: Mirror.Examples.dll
     namespaceName: Mirror.Examples.NetworkRoom
     className: NetworkRoomPlayerExt
-  - hash:
-      serializedVersion: 2
-      Hash: 592a1672b0b600d35bad890f222bcc4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: CardFlipper
-  - hash:
-      serializedVersion: 2
-      Hash: bb560bc3eec556516d3480ba529763ad
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: DebugLogDisplay
   platform: 19
   scenePathNames:
   - Assets/Scenes/SampleScene.unity
