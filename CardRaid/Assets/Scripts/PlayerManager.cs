@@ -9,6 +9,7 @@ public class PlayerManager : NetworkBehaviour
     public GameObject Card2;
     public GameObject PlayerArea;
     public GameObject EnemyArea;
+    public GameObject Clock;
 
     List<GameObject> cards = new List<GameObject>();
 
@@ -24,6 +25,7 @@ public class PlayerManager : NetworkBehaviour
         PlayerArea = GameObject.Find("PlayerArea");
         EnemyArea = GameObject.Find("EnemyArea");
         DropZone = GameObject.Find("DropZone");
+        Clock = GameObject.Find("Clock");
     }
 
     [Server]
