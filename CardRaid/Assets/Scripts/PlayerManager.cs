@@ -14,9 +14,8 @@ public class PlayerManager : NetworkBehaviour
     List<GameObject> cards = new List<GameObject>();
 
     public GameObject DropZone;
-
-    //TestCards
-    public GameObject AttackSpellCard;
+    
+    //Runtime Prefabs
 
     [SyncVar]
     int cardsPlayed = 0;
@@ -34,7 +33,7 @@ public class PlayerManager : NetworkBehaviour
     [Server]
     public override void OnStartServer()
     {
-        cards.Add(AttackSpellCard);
+        //ClientScene.RegisterPrefab()
         cards.Add(Card1);
         cards.Add(Card2);
     }
@@ -42,9 +41,10 @@ public class PlayerManager : NetworkBehaviour
     [Command]
     public void CmdDealCards()
     {
+        Debug.Log("Inside command deal cards");
         for (int i = 0; i < 5; i++)
         {
-            GameObject card = Instantiate(cards[Random.Range(0, cards.Count)], new Vector2(0, 0), Quaternion.identity);
+            GameObject card = Instantiate(cards[Random.Range(0, cards.Count)], new Vector2(0,0), Quaternion.identity);
             //create a card on every client so that everyone can see it
             NetworkServer.Spawn(card, connectionToClient);
             RpcShowCard(card, "Dealt");
@@ -55,7 +55,7 @@ public class PlayerManager : NetworkBehaviour
     {        
         CmdPlayCard(card);
         cardsPlayed++;
-        Debug.Log("CardsPlayed=" + cardsPlayed);
+        //Debug.Log("CardsPlayed=" + cardsPlayed);
     }
 
     [Command]

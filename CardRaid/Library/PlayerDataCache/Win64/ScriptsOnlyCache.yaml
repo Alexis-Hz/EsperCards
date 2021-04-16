@@ -9,7 +9,6 @@ ScriptsOnlyBuild:
     - DrawCards
     - Orchestrator
     - PlayerManager
-    - SpellCard
     Mirror.Components.dll:
     - Mirror.NetworkTransform
     Mirror.dll:
@@ -73,43 +72,43 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1492}
     - Class: 114
-      Script: {instanceID: 2006}
+      Script: {instanceID: 2008}
     - Class: 114
-      Script: {instanceID: 2238}
+      Script: {instanceID: 2074}
     - Class: 114
-      Script: {instanceID: 2430}
+      Script: {instanceID: 2242}
     - Class: 114
-      Script: {instanceID: 2440}
+      Script: {instanceID: 2434}
     - Class: 114
-      Script: {instanceID: 2554}
+      Script: {instanceID: 2444}
     - Class: 114
-      Script: {instanceID: 2930}
+      Script: {instanceID: 2558}
     - Class: 114
-      Script: {instanceID: 2988}
+      Script: {instanceID: 2934}
     - Class: 114
-      Script: {instanceID: 3030}
+      Script: {instanceID: 2992}
     - Class: 114
-      Script: {instanceID: 3124}
+      Script: {instanceID: 3034}
     - Class: 114
-      Script: {instanceID: 3630}
+      Script: {instanceID: 3128}
     - Class: 114
-      Script: {instanceID: 3834}
+      Script: {instanceID: 3636}
     - Class: 114
-      Script: {instanceID: 4020}
+      Script: {instanceID: 3840}
     - Class: 114
-      Script: {instanceID: 4084}
+      Script: {instanceID: 4026}
     - Class: 114
-      Script: {instanceID: 4186}
+      Script: {instanceID: 4090}
     - Class: 114
-      Script: {instanceID: 4328}
+      Script: {instanceID: 4192}
     - Class: 114
-      Script: {instanceID: 4336}
+      Script: {instanceID: 4334}
     - Class: 114
-      Script: {instanceID: 4468}
+      Script: {instanceID: 4342}
     - Class: 114
-      Script: {instanceID: 4758}
+      Script: {instanceID: 4474}
     - Class: 114
-      Script: {instanceID: 22414}
+      Script: {instanceID: 4764}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -317,6 +316,12 @@ ScriptsOnlyBuild:
     className: RandomColor
   - hash:
       serializedVersion: 2
+      Hash: 7d3a130db004ef654e85626a6d287d53
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: HydrateCard
+  - hash:
+      serializedVersion: 2
       Hash: 93827904d1237a324c550ba2fe498ea8
     assemblyName: Mirror.Authenticators.dll
     namespaceName: Mirror.Authenticators
@@ -357,6 +362,12 @@ ScriptsOnlyBuild:
     assemblyName: Mirror.Examples.dll
     namespaceName: Mirror.Examples.Chat
     className: Player
+  - hash:
+      serializedVersion: 2
+      Hash: a6e561615949734e9f12f9b61661f43e
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: CutoutMaskUI
   - hash:
       serializedVersion: 2
       Hash: d791aa6007fa3640be1164ea75bb087d
@@ -771,6 +782,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.EventSystems
     className: Physics2DRaycaster
+  - hash:
+      serializedVersion: 2
+      Hash: 948cbec74ec85efa8a76a14f7fbf7dad
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: SpellCard
   - hash:
       serializedVersion: 2
       Hash: a2612813f45d0ced02c3e4bc9dbea8b4
@@ -1203,18 +1220,6 @@ ScriptsOnlyBuild:
     assemblyName: Mirror.Examples.dll
     namespaceName: Mirror.Examples.NetworkRoom
     className: NetworkRoomPlayerExt
-  - hash:
-      serializedVersion: 2
-      Hash: 365a81fb351797ab91595090dc88f4f9
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: SpellCard
-  - hash:
-      serializedVersion: 2
-      Hash: a6e561615949734e9f12f9b61661f43e
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: CutoutMaskUI
   platform: 19
   scenePathNames:
   - Assets/Scenes/SampleScene.unity
