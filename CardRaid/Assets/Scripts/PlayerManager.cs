@@ -15,6 +15,9 @@ public class PlayerManager : NetworkBehaviour
 
     public GameObject DropZone;
 
+    //TestCards
+    public GameObject AttackSpellCard;
+
     [SyncVar]
     int cardsPlayed = 0;
     // Start is called before the first frame update
@@ -31,6 +34,7 @@ public class PlayerManager : NetworkBehaviour
     [Server]
     public override void OnStartServer()
     {
+        cards.Add(AttackSpellCard);
         cards.Add(Card1);
         cards.Add(Card2);
     }

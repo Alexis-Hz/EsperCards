@@ -3,11 +3,13 @@ ScriptsOnlyBuild:
     Assembly-CSharp.dll:
     - CardFlipper
     - CardZoom
+    - CutoutMaskUI
     - DebugLogDisplay
     - DragDrop
     - DrawCards
     - Orchestrator
     - PlayerManager
+    - SpellCard
     Mirror.Components.dll:
     - Mirror.NetworkTransform
     Mirror.dll:
@@ -38,6 +40,7 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.GraphicRaycaster
     - UnityEngine.UI.GridLayoutGroup
     - UnityEngine.UI.Image
+    - UnityEngine.UI.Mask
     - UnityEngine.UI.Text
   sceneClasses:
     Assets/Scenes/SampleScene.unity:
@@ -90,6 +93,8 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 3630}
     - Class: 114
+      Script: {instanceID: 3834}
+    - Class: 114
       Script: {instanceID: 4020}
     - Class: 114
       Script: {instanceID: 4084}
@@ -103,6 +108,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 4468}
     - Class: 114
       Script: {instanceID: 4758}
+    - Class: 114
+      Script: {instanceID: 22414}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -1196,6 +1203,18 @@ ScriptsOnlyBuild:
     assemblyName: Mirror.Examples.dll
     namespaceName: Mirror.Examples.NetworkRoom
     className: NetworkRoomPlayerExt
+  - hash:
+      serializedVersion: 2
+      Hash: 365a81fb351797ab91595090dc88f4f9
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: SpellCard
+  - hash:
+      serializedVersion: 2
+      Hash: a6e561615949734e9f12f9b61661f43e
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: CutoutMaskUI
   platform: 19
   scenePathNames:
   - Assets/Scenes/SampleScene.unity
