@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class HydrateCard : MonoBehaviour
 {
-    public SpellCard spellCard;
+    public SpellSO spellCard;
 
     public Text timeText;
     public Text nameText;
@@ -13,9 +13,10 @@ public class HydrateCard : MonoBehaviour
     public Text attackText;
 
     // Start is called before the first frame update
-    void Start()
+    public void Hydrate(SpellSO spellcardx)
     {
-        GameObject.Find("AttackSpellCard").GetComponent<Image>().sprite = spellCard.cardImage;
+        spellCard = spellcardx;
+        gameObject.GetComponent<Image>().sprite = spellCard.cardImage;
         timeText.text = spellCard.cardTime.ToString();
         nameText.text = spellCard.cardName;
         textText.text = spellCard.cardText;

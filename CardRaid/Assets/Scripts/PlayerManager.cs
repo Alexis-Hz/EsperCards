@@ -10,6 +10,9 @@ public class PlayerManager : NetworkBehaviour
     public GameObject PlayerArea;
     public GameObject EnemyArea;
     public GameObject Clock;
+    public GameObject CardCollection;
+    public GameObject PlayerDeck;
+    public DeckController DeckController;
 
     List<GameObject> cards = new List<GameObject>();
 
@@ -28,6 +31,10 @@ public class PlayerManager : NetworkBehaviour
         EnemyArea = GameObject.Find("EnemyArea");
         DropZone = GameObject.Find("DropZone");
         Clock = GameObject.Find("Clock");
+        CardCollection = GameObject.Find("CardCollection");
+        PlayerDeck = GameObject.Find("PlayerDeck");
+        DeckController = PlayerDeck.GetComponent<DeckController>();
+        DeckController.CreateStarterDeck(null, CardCollection.GetComponent<CardCollection>());
     }
 
     [Server]
@@ -41,7 +48,6 @@ public class PlayerManager : NetworkBehaviour
     [Command]
     public void CmdDealCards()
     {
-        Debug.Log("Inside command deal cards");
         for (int i = 0; i < 5; i++)
         {
             GameObject card = Instantiate(cards[Random.Range(0, cards.Count)], new Vector2(0,0), Quaternion.identity);
