@@ -388,7 +388,6 @@ MonoBehaviour:
   - {fileID: 5985539449263464132, guid: 4a3ab5dcc51317d4eb2ed60151c437bf, type: 3}
   - {fileID: 2921197792699145832, guid: 1435507f1feb66643a4f87b8f6bd3d32, type: 3}
   - {fileID: 179867216726877781, guid: 2da6bb6ea34cf154ba94905013bc948a, type: 3}
-  - {fileID: 1729846217549658267, guid: e32e37284584d5241b66150afe63245d, type: 3}
 --- !u!1 &803912721
 GameObject:
   m_ObjectHideFlags: 0
@@ -444,7 +443,7 @@ PrefabInstance:
     - target: {fileID: 950559126268215923, guid: e32e37284584d5241b66150afe63245d,
         type: 3}
       propertyPath: clientAuthority
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1729846217549658212, guid: e32e37284584d5241b66150afe63245d,
         type: 3}

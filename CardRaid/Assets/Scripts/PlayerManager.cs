@@ -48,6 +48,17 @@ public class PlayerManager : NetworkBehaviour
     [Command]
     public void CmdDealCards()
     {
+        PlayerHand hand = PlayerArea.GetComponent<PlayerHand>();
+        for (int i = 0; i < hand.cardsToFullHand(); i++)
+        {
+            GameObject card = DeckController.drawCard();
+            Debug.Log("Got Card");
+            NetworkServer.Spawn(card, connectionToClient);
+            Debug.Log("Spawned cards");
+            RpcShowCard(card, "Dealt");
+        }
+        Debug.Log("Finished Drawing Cards");
+        /*
         for (int i = 0; i < 5; i++)
         {
             GameObject card = Instantiate(cards[Random.Range(0, cards.Count)], new Vector2(0,0), Quaternion.identity);
@@ -55,6 +66,7 @@ public class PlayerManager : NetworkBehaviour
             NetworkServer.Spawn(card, connectionToClient);
             RpcShowCard(card, "Dealt");
         }
+        */
     }
 
     public void PlayCard(GameObject card)

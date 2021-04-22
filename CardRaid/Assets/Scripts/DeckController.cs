@@ -27,7 +27,7 @@ public class DeckController : MonoBehaviour
             GameObject card = Instantiate(cardCollection.HollowCollection["Ascension"]);
             deck.Add(card);
         }
-        ShuffleDeck();
+        //ShuffleDeck();
         updateDeckSizeText(deck.Count);
     }
 
@@ -56,7 +56,6 @@ public class DeckController : MonoBehaviour
     public void updateDeckSizeText(int size)
     {
         GameObject.Find("CardCountText").GetComponent<Text>().text = size.ToString();
-        //gameObject.GetComponent<Text>().text = size.ToString();
     }
 
     //this will be used once we have saved states
