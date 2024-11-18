@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Slash
   m_EditorClassIdentifier: 
   cardName: Slash
+  cardCopies: 3
   cardTime: 1
   cardType: Attack
   cardClass: Hollow

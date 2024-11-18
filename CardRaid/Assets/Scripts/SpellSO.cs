@@ -8,6 +8,8 @@ public class SpellSO : ScriptableObject
     [SerializeField]
     public string cardName;
     [SerializeField]
+    public int cardCopies;
+    [SerializeField]
     public int cardTime;
     [SerializeField]
     public string cardType;
@@ -29,5 +31,10 @@ public class SpellSO : ScriptableObject
     public string getName()
     {
         return cardName;
+    }
+
+    public int getCardCopies()
+    {
+        return cardCopies;
     }
 }

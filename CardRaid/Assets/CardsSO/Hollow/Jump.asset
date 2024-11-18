@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Jump
   m_EditorClassIdentifier: 
   cardName: Jump
+  cardCopies: 3
   cardTime: 2
   cardType: Attack
   cardClass: Hollow

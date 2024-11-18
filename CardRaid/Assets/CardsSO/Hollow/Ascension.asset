@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Ascension
   m_EditorClassIdentifier: 
   cardName: Ascension
+  cardCopies: 3
   cardTime: 3
   cardType: Buff
   cardClass: Hollow
