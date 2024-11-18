@@ -9,12 +9,15 @@
 /[Bb]uilds/
 /[Ll]ogs/
 /[Uu]ser[Ss]ettings/
+/CardRaid/Library/
 /CardRaid/Library/Artifacts/
 /CardRaid/Library/PackageCache/
 /CardRaid/Library/ShaderCache/
 /CardRaid/Library/StateCache/
 /CardRaid/obj/Debug/
 /CardRaid/Logs/
+/CardRaid/Temp/
+/CardRaid/Build/
 
 # MemoryCaptures can get excessive in size.
 # They also could contain extremely sensitive data
